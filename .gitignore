@@ -6,7 +6,6 @@ __pycache__/
 *.pyc
 
 # ML artifacts (DO NOT COMMIT)
-*.pkl
 *.joblib
 *.h5
 

@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# ML artifacts (DO NOT COMMIT)
+*.pkl
+*.joblib
+*.h5
+

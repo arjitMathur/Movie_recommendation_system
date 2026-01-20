@@ -9,9 +9,14 @@ def recommend(movie):
     for i in movie_index:
         l.append(movies.iloc[i[0]].title)
     return l
-    
-movies=pickle.load(open('movies.pkl','rb'))
-similarity=pickle.load(open('similarity.pkl','rb'))
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+movies = pickle.load(open(os.path.join(BASE_DIR, 'movies.pkl'), 'rb'))
+similarity = pickle.load(open(os.path.join(BASE_DIR, 'similarity.pkl'), 'rb'))
+
 
 movies_list=movies['title'].values
 st.title('Movie Recommender System')

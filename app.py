@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import os
+
 def recommend(movie):
     movie_index=movies[movies['title']== movie].index[0]
     distances=similarity[movie_index]
@@ -9,8 +11,6 @@ def recommend(movie):
     for i in movie_index:
         l.append(movies.iloc[i[0]].title)
     return l
-
-import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
